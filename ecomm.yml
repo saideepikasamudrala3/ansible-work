@@ -1,0 +1,19 @@
+---
+- name: host ecomm app on n2 server
+  hosts: n2
+  become: yes
+
+  tasks:
+
+  - name: Install git
+    yum:
+      name: git
+      state: present
+
+
+  - name: Get files from git hub
+    git:
+      repo: https://github.com/ravi2krishna/ecomm.git
+      dest: \var\www\html
+
+...
