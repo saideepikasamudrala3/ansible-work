@@ -1,0 +1,36 @@
+---
+- name: update n1 server
+  hosts: n1
+  remote_user: root
+
+  tasks:
+  - name: create a directory
+    file:
+      path: /home/centos/n1_directory
+      state: directory
+
+- name: update n2 server
+  hosts: n2
+  remote_user: root
+
+  tasks:
+  - name: create a directory
+    file:
+      path: /home/centos/n2_directory
+      state: directory
+      
+- name: update group of server
+  hosts: g1
+  remote_user: root
+
+  tasks:
+  - name: create a directory on g1
+    file:
+      path: /home/centos/new_dir
+      state: directory
+
+  - name: create a directory on g1
+    file:
+      path: /home/centos/new_dir-1
+      state: directory
+...
