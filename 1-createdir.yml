@@ -1,6 +1,6 @@
 ---
 - name: update n1 server
-  hosts: n1
+  hosts: node1
   remote_user: root
 
   tasks:
@@ -8,4 +8,4 @@
     file:
       path: /home/centos/n1_directory
       state: directory
-  ...
+...
