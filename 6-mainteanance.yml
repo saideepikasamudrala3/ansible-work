@@ -1,0 +1,14 @@
+---
+- name: copy maintainence html to g1
+  hosts: g1
+  become: yes
+
+  tasks:
+
+  - name: copy maintainence html to both servers
+    copy:
+      src: maitainence.html
+      dest: /var/www/html/index.html
+
+
+...
