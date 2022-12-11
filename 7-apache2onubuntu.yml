@@ -1,6 +1,6 @@
 ---
 - name: Install apache2 on ubuntu server
-  hosts: node2
+  hosts: node3
   become: yes
 
   tasks:
