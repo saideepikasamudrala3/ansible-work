@@ -1,6 +1,6 @@
 ---
 - name: host ecomm app on n2 server
-  hosts: n2
+  hosts: node2
   become: yes
 
   tasks:
