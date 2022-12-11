@@ -1,0 +1,11 @@
+---
+- name: update n1 server
+  hosts: node1
+  remote_user: root
+
+  tasks:
+  - name: create a file
+    file:
+      path: /etc/trail.conf
+      state: touch
+...

@@ -1,0 +1,19 @@
+---
+- name: defined custom var to execute
+  hosts: node1
+  become: yes
+
+  vars:
+  DIR: /etc
+  fileext: *.conf
+  days: 30
+
+  tasks:
+
+  - name: copy static html to both servers
+    template:
+      src: sample.j2
+      dest: /etc/trail.conf
+
+
+...

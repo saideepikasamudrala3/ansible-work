@@ -1,0 +1,17 @@
+---
+- name: copy static html to g1
+  hosts: g1
+  become: yes
+
+  vars:
+  myusername: deepu
+
+  tasks:
+
+  - name: copy static html to both servers
+    template:
+      src: dynamic.j2
+      dest: /var/www/html/static.html
+
+
+...
