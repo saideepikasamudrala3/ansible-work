@@ -1,7 +1,8 @@
 ---
 - name: update n1 server
   hosts: node1
-  remote_user: root
+  become: yes
+
 
   tasks:
   - name: create a file
