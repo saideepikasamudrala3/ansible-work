@@ -5,7 +5,7 @@
 
   vars:
   DIR: /etc
-  fileext: *.conf
+  fileext: trail.conf
   days: 30
 
   tasks:
