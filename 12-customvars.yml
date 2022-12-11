@@ -1,12 +1,14 @@
 ---
+
 - name: defined custom var to execute
   hosts: node1
   become: yes
 
   vars:
+
   DIR: /etc
   fileext: trail.conf
-  days: 30
+  
 
   tasks:
 
