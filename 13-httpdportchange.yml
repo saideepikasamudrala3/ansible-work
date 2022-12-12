@@ -1,0 +1,19 @@
+---
+- name: change port numbers in httpd 
+  hosts: g1
+  become: yes
+
+  vars:
+  http_default_port: 80
+  http_port1: 8080
+  http_port2: 9090
+
+  tasks:
+
+  - name: copy static html to both servers
+    template:
+      src: httpd.j2
+      dest: /etc/httpd/conf/httpd.conf
+
+
+...
