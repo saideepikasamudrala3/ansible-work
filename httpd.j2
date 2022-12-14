@@ -39,9 +39,9 @@ ServerRoot "/etc/httpd"
 # prevent Apache from glomming onto all bound IP addresses.
 #
 #Listen 12.34.56.78:80
-Listen {{ http_default_port }}
-Listen {{ http_port1 }}
-Listen {{ http_port2 }}
+Listen {{ http_port_default }}
+Listen {{ http_port_1 }}
+Listen {{ http_port_2 }}
 
 #
 # Dynamic Shared Object (DSO) Support
