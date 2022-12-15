@@ -1,2 +1,4 @@
 ---
 # tasks file for httpd
+- import: install.yml
+- import: config.yml

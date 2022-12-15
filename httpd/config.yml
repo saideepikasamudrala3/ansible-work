@@ -1,0 +1,17 @@
+---
+
+
+
+- name: copy static html to both servers
+    template:
+      src: dynamic.j2
+      dest: /var/www/html/static.html
+
+- name: change port numbers in httpd
+    template:
+      src: httpd.j2
+      dest: /etc/httpd/conf/httpd.conf
+
+...
+
+ 
