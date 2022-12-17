@@ -1,10 +1,10 @@
 ---
 
  - name: Update HTTPD Config
-    template:
+   template:
       src: httpd.j2
       dest: /etc/httpd/conf/httpd.conf
-    notify:
+   notify:
     - Restart HTTPD
   
 ...
