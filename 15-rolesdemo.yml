@@ -3,7 +3,7 @@
   hosts: g1
   become: yes
 
-  - roles:
+  roles:
     - httpd
     - html
 ...
