@@ -1,14 +1,16 @@
 ---
 # tasks file for html
 - name: Install git
-    yum:
+  yum:
       name: git
       state: present
 
 
 - name: Get files from git hub
-    git:
+  git:
       repo: https://github.com/ravi2krishna/ecomm.git
       dest: /var/www/html
       force: yes
+
+...
   
