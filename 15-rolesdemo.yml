@@ -1,6 +1,6 @@
 ---
 - name: host ecomm app on node1 server
-  hosts: node1
+  hosts: g1
   become: yes
 
 - roles:
