@@ -1,2 +1,5 @@
 ---
 # vars file for php
+    dbname: localhost 
+    uname: root
+    pwd: Admin123
