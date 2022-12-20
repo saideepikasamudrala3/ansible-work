@@ -1,0 +1,9 @@
+---
+- name: host bookstore app on node1 server
+  hosts: node1
+  become: yes
+
+  roles:
+    - httpd
+    - php
+...

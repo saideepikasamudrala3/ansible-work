@@ -2,6 +2,6 @@
 # tasks file for httpd
 - name: Task to install and configure httpd
     import_tasks: install.yml
-    import_tasks: config.yml
+    
 
 ...
