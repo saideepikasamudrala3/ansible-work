@@ -1,7 +1,7 @@
 ---
 # tasks file for php
-- name: Task to install php runtime and configure mysql db 
-    import_tasks: install.yml
-    import_tasks: config.yml
+ 
+- import_tasks: install.yml
+- import_tasks: config.yml
 
 ...
