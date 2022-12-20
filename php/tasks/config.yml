@@ -1,0 +1,17 @@
+---
+
+
+- name: Get files from git hub
+  git:
+      repo: https://github.com/ravi2krishna/php-lamp.git
+      dest: /var/www/html
+      force: yes
+
+ - name: Update db.php with database Configuration details
+   template:
+      src: db.j2
+      dest: /var/www/html/php/db.php
+   notify:
+    - Restart HTTPD
+  
+...

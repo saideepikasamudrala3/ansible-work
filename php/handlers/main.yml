@@ -1,2 +1,7 @@
 ---
 # handlers file for php
+- name: Restart HTTPD
+  service:
+      name: httpd
+      state: restarted
+...
