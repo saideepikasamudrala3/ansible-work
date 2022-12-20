@@ -1,31 +1,31 @@
 ---
- - name: Install php 
-    yum:
-      name: php
-      state: present
-    when: ansible_distribution == "CentOS" or ansible_distribution == "Amazon"
-    notify:
+- name: Install php 
+  yum:
+   name: php
+   state: present
+  when: ansible_distribution == "CentOS" or ansible_distribution == "Amazon"
+  notify:
     - Restart HTTPD
 
-  - name: Install mysql
-    yum:
-      name: mysql
-      state: present
-    when: ansible_distribution == "CentOS" or ansible_distribution == "Amazon"
+- name: Install mysql
+  yum:
+   name: mysql
+   state: present
+  when: ansible_distribution == "CentOS" or ansible_distribution == "Amazon"
 
-  - name: Install php-mysql to avoid http 404 error
-    yum:
-      name: php-mysql
-      state: present
-    when: ansible_distribution == "CentOS" or ansible_distribution == "Amazon"
-    notify:
+- name: Install php-mysql to avoid http 404 error
+  yum:
+   name: php-mysql
+   state: present
+  when: ansible_distribution == "CentOS" or ansible_distribution == "Amazon"
+  notify:
     - Restart HTTPD
   
-  - name: Install git
-    yum:
-      name: git
-      state: present
-    when: ansible_distribution == "CentOS" or ansible_distribution == "Amazon"
+- name: Install git
+  yum:
+   name: git
+   state: present
+  when: ansible_distribution == "CentOS" or ansible_distribution == "Amazon"
 
  
   
